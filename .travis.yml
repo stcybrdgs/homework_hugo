@@ -5,7 +5,12 @@ install:
 before script:
   - rm -rf public
 script:
+  - hugo version
   - hugo
+env:
+  global:
+    - PRODUCTION=true
+    -HUGO_RELEASE=0.77.0
 branches:
   only:
     - master
