@@ -10,7 +10,7 @@ script:
 env:
   global:
     - PRODUCTION=true
-    -HUGO_RELEASE=0.77.0
+    - HUGO_RELEASE=0.77.0
 branches:
   only:
     - master
