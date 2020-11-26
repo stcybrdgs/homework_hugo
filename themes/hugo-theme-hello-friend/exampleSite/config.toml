@@ -11,7 +11,7 @@ paginate = 5
   # dir name of your blog content (default is `content/posts`)
   contentTypeName = "post"
   # "light" or "dark"
-  defaultTheme = "light"
+  defaultTheme = "dark"
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
   # Enable to show reading time in minutes for posts
@@ -19,12 +19,12 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "L7 Homework"
+    title = "Hello Friend"
     subtitle = "A simple theme for Hugo"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
-    writtenBy = "by"
+    writtenBy = "Written by"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
     newerPosts = "Newer posts"
@@ -34,7 +34,7 @@ paginate = 5
     dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
-      logoText = "L7 Homework"
+      logoText = "hello friend"
       logoHomeLink = "/"
     # or
     #
