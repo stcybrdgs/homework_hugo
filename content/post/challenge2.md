@@ -16,8 +16,7 @@ I skipped the bonus option related to automated tests.
 
 Assets include the following:
 
-### Demos & Code
-- See the **demo video** on **[YouTube](https://youtu.be/rowh15YFsgw)**.
+### Live App & Code
 - See the **live app** on **[VueToots](https://www.vuetoots.com)**.
 - See the **full code** on **[GitHub](https://github.com/stcybrdgs/benapp_fin)**.
 
