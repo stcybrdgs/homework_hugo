@@ -20,7 +20,7 @@ paginate = 5
 [languages]
   [languages.en]
     title = "L7 Homework"
-    subtitle = "A simple theme for Hugo"
+    subtitle = ""
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -38,7 +38,7 @@ paginate = 5
       logoHomeLink = "/"
     # or
     #
-    # path = "/img/your-example-logo.svg"
+    #path = "/img/your-example-logo.svg"
     # alt = "Your example logo alt text"
 
     [languages.en.menu]

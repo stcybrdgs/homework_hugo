@@ -51,7 +51,12 @@
           {{ if .Params.UseRelativeCover }}
             <img src="{{ (printf "%s%s" .Permalink .Params.Cover ) }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}"/>
           {{ else }}
-            <img src="{{ .Params.Cover | absURL }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}"/>
+
+          <img
+            style="height:160px; float:left; margin-left:60px;" 
+            src="{{ .Params.Cover | absURL }}" alt="{{ .Params.CoverAlt | plainify | default .Title }}"/>
+          <!--
+            -->
           {{ end }}
 
           {{ if .Params.CoverCaption }}
