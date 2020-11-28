@@ -1,6 +1,6 @@
 +++
 title = "Challenge 2: Benford's Law"
-date = "2020-11-25"
+date = "2020-11-26"
 author = "Stacy Bridges"
 cover = "img/thebennyapp.jpg"
 description = "**Challenge 2**: Create a Python-based web app that showcases Benford's Law."

@@ -37,3 +37,9 @@ y  = [4, 5, [6,7]]
 
 print( [ (x_i + y_i) for x_i, y_i in zip(x, y) ] )
 print([3] + [6])
+
+dict = { 'one': 1, 'two': 2 }
+k1 = 'one'
+k2 = 'two'
+print( dict['one'], dict['two'])
+print( dict['one'] + dict['two'])

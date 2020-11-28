@@ -97,7 +97,7 @@ print( '3' * '3' )  # TypeError !
 ```
 
 If you want to use a multiplier with other data types besides strings, the placement of the operands may become important.
-A good rule of thumb is to place the *multiplicand* in the *left operand* and the *multiplier* in the *right operand*.
+My rule of thumb is to place the *multiplicand* in the *left operand* and the *multiplier* in the *right operand*.
 
 So, to remedy the code, I would probably go to **line 47** and try casting one of the **'3'** arguments as a number (i.e., the *multiplier*)... preferably, the argument in the **y** position, i.e.:
 ```python
@@ -212,18 +212,18 @@ Traceback (most recent call last):
 TypeError: can only concatenate list (not "int") to list
 ```
 #### Answer:
-Similar to the previous problem, this stack trace has two iterables using
-the `zip()` function with an adder function to iteratively add the values in
+Similar to the previous problem, this stack trace has two iterables that use
+the `zip()` function together with an adder function to iteratively add the values in
 list **y** to the values in list **x**. This time, the final values of the iterables,
 namely **[3]** and **6**, cannot be added together because the Python **'+'** operator is not
 equipped to handle the data-type mismatch (i.e., *list + integer*).
 
-Again, my inclination would be to inspect the calculation first, around
-**line 8** and **line 12**, to make sure that I haven't missed something--- I think we are dealing
+Again, my inclination would be to inspect the calculation first, starting around
+**lines 8 and 12**, to make sure that I haven't missed something--- I think we are dealing
 with a simple adder function, but maybe there is a gremlin. Afterward, I would
 want to update the arguments as appropriate at **line 51**.
 
-Because we are using a `zip()` function, our interest must be summing the
+Because we are using a `zip()` function, our interest must be in summing the
 list contents at each index, not just concatenating the lists. As a result, my
 updates to the arguments at **line 51** would probably look like:  
 
@@ -252,7 +252,16 @@ Traceback (most recent call last):
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 #### Answer:
-Answer goes here...
+This problem is similar to **Problem 2** except that the `TypeError` is thrown
+on values that were parsed from a dictionary object.  The error is caused by the
+data types being mismatched for the dictionary keys *'one'* and *'two'*.
+
+One way to fix the issue would be to decide if the operation is supposed to be
+**arithmetic** or **stringy** and then update the argument inputs as needed at
+**line 52**.
+
+- For arithmetic: `dict = { 'one': 1, 'two': 2 }`
+- For stringy: `dict = { 'one': '1', 'two': '2' }`
 
 #
 [`Go to Contents`](#contents)
@@ -271,7 +280,11 @@ Traceback (most recent call last):
 KeyError: 'one'
 ```
 #### Answer:
-Answer goes here...
+For this problem, when Python goes to look up the key *'one'* in the dictionary, it cannot
+find it because it is not there, which results in the `KeyError` being thrown.
+
+It appears that the dictionary at **line 53** is indeed empty, so it should be populated with `key:value` pairs.
+At a minimum, it needs to contain data for the keys *'one'* and *'two'*.
 
 #
 [`Go to Contents`](#contents)
