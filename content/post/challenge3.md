@@ -3,13 +3,19 @@ title = "Challenge 3: Python Stack Traces"
 date = "2020-11-25"
 author = "Stacy Bridges"
 cover = "img/stacktrace.jpg"
-description = "**Challenge 3**: Examine the stack trace, summarize the problem, and identify your go-to line of code."
+description = "**Challenge 3**: Your task is to examine the stack traces and provide a brief response for each one..."
 +++
-> *Examine the stack trace, summarize the problem, and identify your go-to line of code...*
+## Problem Statement
+
+Your task is to examine the stack traces and provide a brief response for each one that summarizes what the problem or likely problem is,
+and the first line of code you would jump to in your code editor given the trace.
+
 #
 ---
-# {#contents}
-#### Contents:
+#
+
+## My Response
+### Contents: {#contents}
 - **[Problem 1](#prob-1)** `TypeError: can only concatenate str (not "int") to str`
 - **[Problem 2](#prob-2)** `TypeError: unsupported operand type(s) for +: 'int' and 'str`
 - **[Problem 3](#prob-3)** `TypeError: can't multiply sequence by non-int of type 'str'`
@@ -35,7 +41,7 @@ Traceback (most recent call last):
     return x + y
 TypeError: can only concatenate str (not "int") to str
 ```
-#### Answer:
+### Answer:
 Unlike JavaScript, the Python language won't attempt to dynamically cast variables when operands present a mixed bag to the **'+'** operator.
 So, the issue in this trace is that the operands need to be of the same type.
 
@@ -62,7 +68,7 @@ Traceback (most recent call last):
     return x + y
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
-#### Answer:
+### Answer:
 As with **Problem 1**, the operands need to be of the same type. The `TypeError` message is different, but the problem is essentially the same.
 
 Again, I would decide if the operation is supposed to be **arithmetic** or **stringy**, and then I would recast the offending variable in the caller at **line 46**.  
@@ -85,7 +91,7 @@ Traceback (most recent call last):
     return x * y
 TypeError: can't multiply sequence by non-int of type 'str'
 ```
-#### Answer:
+### Answer:
 Yes, Python lets you *'multiply'* strings if your use case requires it. However, you must multiply a string with a number. A string-on-string operation is not allowed with this operator.
 
 If the intention here is only to return **x** number of strings, then the placement of the *number* and *string* operands is not important, but you must have one of each:
@@ -121,7 +127,7 @@ Traceback (most recent call last):
     return x * y
 TypeError: can't multiply sequence by non-int of type 'list'
 ```
-#### Answer:
+### Answer:
 This problem is similar to **Problem 3** except that it uses a different data type.
 
 To solve this problem, I would go to the caller at **line 48** and re-cast the argument in the **y** position as a number (the *multiplier*), i.e.:
@@ -153,7 +159,7 @@ Traceback (most recent call last):
     raise ValueError('Invalid')
 ValueError: Invalid
 ```
-#### Answer:
+### Answer:
 I am guessing this error fell out of a `try: , except:` structure in the **spelunk()** method.
 
 I would probably go to **line 21** to figure out which condition failed.
@@ -174,7 +180,7 @@ Traceback (most recent call last):
     return [perform_calculation(calc, x_i, y_i) for x_i, y_i in zip(x, y)]
 TypeError: zip argument #2 must support iteration
 ```
-#### Answer:
+### Answer:
 The `zip()` function in Python is an iterator, so it can be used with iterable data.
 In this stack trace, it looks like we tried to pass non-iterable data to the `zip()` function.
 
@@ -211,7 +217,7 @@ Traceback (most recent call last):
     return x + y
 TypeError: can only concatenate list (not "int") to list
 ```
-#### Answer:
+### Answer:
 Similar to the previous problem, this stack trace has two iterables that use
 the `zip()` function together with an adder function to iteratively add the values in
 list **y** to the values in list **x**. This time, the final values of the iterables,
@@ -251,7 +257,7 @@ Traceback (most recent call last):
     return x + y
 TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
-#### Answer:
+### Answer:
 This problem is similar to **Problem 2** except that the `TypeError` is thrown
 on values that were parsed from a dictionary object.  The error is caused by the
 data types being mismatched for the dictionary keys *'one'* and *'two'*.
@@ -279,7 +285,7 @@ Traceback (most recent call last):
     return perform_calculation(calc, d[k1], d[k2])
 KeyError: 'one'
 ```
-#### Answer:
+### Answer:
 For this problem, when Python goes to look up the key *'one'* in the dictionary, it cannot
 find it because it is not there, which results in the `KeyError` being thrown.
 
