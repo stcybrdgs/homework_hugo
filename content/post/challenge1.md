@@ -109,7 +109,7 @@ For now, I feel that I have reached a reasonable stopping point. I know that add
 > - **[Widgets Table Structure](https://dbdocs.io/stcybrdgs/Widgets?view=table_structure)**
 >
 > Regarding the **system architecture** -  
-It seems the architecture can be light weight given such small data-- three *Customers*, five *Widgets*, and three types of *Packaging* (i.e., box, crate, or bag). Given that the Sales Representative could figure out the units and pricing on the fly---with simple validation checks for widget-package pairing (i.e., an *Elephant Trap* cannot fit into an *Ant Trap* bag)--- then perhaps we could build a simple *client-server* setup with a front-end GUI that makes simple API `GET` requests for the current *Customer Package* information and simple `PUT` requests to register any new packages. The API could be updated whenever users of other system make baseline changes to the contents of *Customers*
+It seems the architecture can be light weight given such small data-- three *Customers*, five *Widgets*, and three types of *Packaging* (i.e., box, crate, or bag). Given that the Sales Representative could figure out the units and pricing on the fly---with simple validation checks for widget-package pairing (i.e., an *Elephant Trap* cannot fit into an *Ant Trap* bag)--- then perhaps we could build a simple *client-server* setup with a front-end GUI that makes simple API `GET` requests for the current *Customer Package* information and simple `PUT` requests to register any new packages. The API could be updated whenever users of other system make baseline changes to the contents of *Customers*, *Widgets*, or *Packaging*.
 
 **3. Any questions or concerns you have regarding this dataset/system that might need to be answered before establishing an ideal database/solution for such a system?**
 
@@ -121,12 +121,3 @@ Regarding the **system** I would want to know exactly what kind of system is des
 > - Do the *qty* and *min qty* values refer to inventory, purchase orders, or something else?
 > - If the *Prices* in the data are related to customer transactions, then do we have any additional historical data related to those transactions (i.e., timestamps, invoice numbers, etc.)?
 > What is the current working data model? Do we have one? If so, how does it account for the data points that we are seeing in this data? Do we need to update it to provide new data points for upcoming sprints?
-
-#
----
-#
-
-### Deliverables
-Please see my exploratory **Schema** documentation at:
-- **[DBDocs Relationships](https://dbdocs.io/stcybrdgs/Widgets?view=relationships)**
-- **[DBDocs Table Structure](https://dbdocs.io/stcybrdgs/Widgets?view=table_structure)**
