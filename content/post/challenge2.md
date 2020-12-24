@@ -32,7 +32,7 @@ I skipped the bonus option related to automated tests.
 Assets include the following:
 
 ### Live App & Code
-- See the **live app** on **[VueToots](https://www.vuetoots.com)**.
+- See the **live app** on **[Heroku](https://the-benny-app.herokuapp.com/)**.
 - See the **full code** on **[GitHub](https://github.com/stcybrdgs/benapp_fin)**.
 
 ### Docker Image
