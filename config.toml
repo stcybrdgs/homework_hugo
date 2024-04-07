@@ -19,7 +19,7 @@ paginate = 5
 
 [languages]
   [languages.en]
-    title = "L7 Homework"
+    title = "Home Page"
     subtitle = ""
     keywords = ""
     copyright = ""
@@ -34,7 +34,7 @@ paginate = 5
     dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
-      logoText = "L7 Homework"
+      logoText = "Home Page"
       logoHomeLink = "/"
     # or
     #
